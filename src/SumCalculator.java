@@ -9,14 +9,14 @@ public class SumCalculator {
 
         // Basic Arithmetic Style (for loop)
         int sumArithmetic = 0;
-        String expression1 = "";
+        StringBuilder expression1 = new StringBuilder();
 
         for (int i = 1; i <= number; i++) {
             sumArithmetic += i; // add each number
-            expression1 += i; // build string expression
+            expression1.append(i); // build string expression
 
             if (i < number) {
-                expression1 += " + ";
+                expression1.append(" + ");
             }
         }
 
@@ -25,14 +25,14 @@ public class SumCalculator {
         // While Loop (Bonus)
         int counter = 1;
         int sumWhile = 0;
-        String expression2 = "";
+        StringBuilder expression2 = new StringBuilder();
 
         while (counter <= number) {
             sumWhile += counter;
-            expression2 += counter;
+            expression2.append(counter);
 
             if (counter < number) {
-                expression2 += " + ";
+                expression2.append(" + ");
             }
             counter++;
         }
